@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notificações</title>
+    <link href="./lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./lib/toastr/toastr.min.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+  </head>
+
+  <body ng-app="NotificaApp" ng-controller="MainCtr">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Notificações</a>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container" id="pagina">
+      <div class="row">
+      	<div class="page-header">
+      		<h1>Compromissos</h1>
+      	</div>
+
+      	<table class="table table-condensed">
+      	    <tr>
+                <th>Compromisso</th>
+                <th>Em</th>
+      		</tr>
+
+      		<tr ng-repeat="notif in notificacoes">
+      			<td>{{ notif.descricao }}</td>
+      			<td>{{ notif.data_hora | date:"M/d/yy h:mm" }}</td>
+      		</tr>
+      	</table>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Andre Luan 2015</p>
+      </footer>
+    </div>
+
+
+	<script src="./lib/socket.io-client/socket.io.js"></script>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./lib/angular/angular.min.js"></script>
+    <script src="./lib/toastr/toastr.min.js"></script>
+
+    <script src="./javascript/servicos/socketio.js"></script>
+    <script src="./javascript/app.js"></script>
+  </body>
+</html>

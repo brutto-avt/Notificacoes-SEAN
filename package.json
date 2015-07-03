@@ -1,0 +1,14 @@
+{
+  "name": "notificacoes",
+  "version": "0.0.1",
+  "main": "app.js",
+  "author": "Andre Luan",
+  "dependencies": {
+    "express": "^4.12.3",
+    "mssql": "^2.1.3",
+    "object.observe": "^0.2.4",
+    "observed": "^1.1.1",
+    "socket.io": "^1.3.5",
+    "underscore": "^1.8.3"
+  }
+}
